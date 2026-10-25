@@ -2,17 +2,23 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./public/favicon.png" />
-    <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover" />
-    <meta name="theme-color" content="#0a0e14" />
+    <title>Ventas &amp; Cuentas</title>
+    <meta name="description" content="Control de ventas y cuentas de la cancha" />
 
-    <!-- Para que al agregarla a inicio en iPhone abra en pantalla completa, sin la barra de Safari -->
+    <!-- Iconos (los archivos de public/ se sirven desde la raíz, sin /public/) -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- PWA: manifest (Android / Chrome) -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#0a0e14" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <!-- PWA: iOS. Al agregarla a inicio abre en pantalla completa, sin la barra de Safari -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="Cancha" />
-
-    <title>Ventas &amp; Cuentas</title>
   </head>
   <body>
     <div id="root"></div>
