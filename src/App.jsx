@@ -31,7 +31,6 @@ export default function App() {
     setTheme((t) => (t === 'dark' ? 'light' : 'dark'))
   }
 
-  // ---------- Clientes ----------
   function addClient(name) {
     setClients((prev) => [...prev, { id: genId(), name, order: [], createdAt: new Date().toISOString() }])
   }
@@ -41,7 +40,6 @@ export default function App() {
     setSelectedClientId(null)
   }
 
-  // ---------- Pedido en curso ----------
   function addProductToOrder(clientId, productId) {
     const product = products.find((p) => p.id === productId)
     if (!product) return
@@ -108,7 +106,6 @@ export default function App() {
 
     setTickets((prev) => [ticket, ...prev])
 
-    // Actualiza contador de ventas y descuenta existencia por producto
     setProducts((prev) =>
       prev.map((p) => {
         const sold = client.order.find((i) => i.productId === p.id)
@@ -119,15 +116,11 @@ export default function App() {
       })
     )
 
-    // Reinicia la cuenta del cliente
     setClients((prev) => prev.map((c) => (c.id === clientId ? { ...c, order: [] } : c)))
 
-    // Ya no se abre el ticket automáticamente: solo se guarda en el historial.
-    // Se puede consultar después desde Reportes, tocando el nombre del cliente.
     setSelectedClientId(null)
   }
-
-  // ---------- Productos ----------
+  
   function addProduct({ name, price, stock }) {
     setProducts((prev) => [...prev, { id: genId(), name, price, sales: 0, stock }])
   }

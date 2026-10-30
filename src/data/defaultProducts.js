@@ -1,7 +1,7 @@
 // Productos de ejemplo para el primer arranque.
 // El usuario puede editar, borrar o agregar más desde la pestaña "Productos".
 export const defaultProducts = [
-  { id: 'p1', name: 'Agua', price: 10, sales: 40, stock: 48 },
+  { id: 'p1', name: 'Agua', price: 10, sales: 40, stock: 52 },
   { id: 'p2', name: 'Cerveza', price: 23, sales: 96, stock: 60 },
   { id: 'p3', name: 'Sport', price: 23, sales: 12, stock: 24 },
   { id: 'p4', name: 'Gatorade', price: 25, sales: 12, stock: 24 },
